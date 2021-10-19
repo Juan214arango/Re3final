@@ -28,7 +28,7 @@ public class Reservations implements Serializable{
     @ManyToOne
     @JoinColumn(name="farmId")
     @JsonIgnoreProperties("reservations")
-    private Farm farm;
+    private Farms farms;
 
     @ManyToOne
     @JoinColumn(name="clientId")
@@ -68,11 +68,11 @@ public class Reservations implements Serializable{
     public void setStatus(String status) {
         this.status = status;
     }
-    public Farm getFarm() {
-        return farm;
+    public Farms getFarms() {
+        return farms;
     }
-    public void setFarm(Farm farm) {
-        this.farm = farm;
+    public void setFarms(Farms farms) {
+        this.farms = farms;
     }
     public Client getClient() {
         return client;

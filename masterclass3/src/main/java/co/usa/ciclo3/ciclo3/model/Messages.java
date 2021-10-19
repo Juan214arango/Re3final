@@ -23,7 +23,7 @@ public class Messages {
     @ManyToOne
     @JoinColumn(name="farmId")
     @JsonIgnoreProperties({ "messages", "reservations","client" })
-    private Farm farm;
+    private Farms farms;
 
     @ManyToOne
     @JoinColumn(name="clientId")
@@ -43,12 +43,12 @@ public class Messages {
     public void setMessageText(String messageText) {
         this.messageText = messageText;
     }
-    public Farm getFarm() {
-        return farm;
+    public Farms getFarms() {
+        return farms;
     }
-    public void setFarm(Farm farm) {
-        this.farm = farm;
-    } 
+    public void setFarms(Farms farms) {
+        this.farms = farms;
+    }  
     public Client getClient() {
         return client;
     }
